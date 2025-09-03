@@ -1,0 +1,126 @@
+/* frontend/src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.header h1 {
+  margin: 0;
+  color: #61dafb; /* React color */
+}
+
+.header a {
+  color: #61dafb;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.generator-section, .history-section {
+  background-color: #333;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #61dafb;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.prompt-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #444;
+  color: #f0f0f0;
+  resize: vertical;
+  box-sizing: border-box; /* Zabezpečí, že padding a border sa započítajú do šírky */
+}
+
+.generate-button {
+  background-color: #61dafb;
+  color: #2a2a2a;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.generate-button:hover:not(:disabled) {
+  background-color: #a4eaff;
+}
+.generate-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.output-box {
+  background-color: #444;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+  white-space: pre-wrap; /* Pre zachovanie formátovania textu */
+}
+
+.history-list {
+  max-height: 400px; /* Obmedzená výška pre históriu */
+  overflow-y: auto; /* Scrollbar pre pretečenie */
+  padding-right: 10px; /* Priestor pre scrollbar */
+}
+
+.history-item {
+  background-color: #444;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #555;
+}
+
+.history-item p {
+  margin: 5px 0;
+}
+
+.history-item strong {
+    color: #61dafb;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr 1fr; /* Dva stĺpce na väčších obrazovkách */
+  }
+}
